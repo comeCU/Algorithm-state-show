@@ -1,0 +1,38 @@
+package com.ycxy.datastruct.algorithm;
+
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.ycxy.datastruct.R;
+import com.ycxy.datastruct.Tools;
+import com.ycxy.datastruct.state.State;
+import com.ycxy.datastruct.state.StateManager;
+
+//线性表算法类,工作重心,注意，所有capture()调用都要写到某行代码右边。
+public class LinearTable {
+    private Node[] mNodes =new Node[12];
+    private int mSize=0;
+    private int mPos,mData;//要插入的位置和数据
+
+    //在pos位置插入数据，pos右边的所有数据右移一格。
+    public void insert(){
+        if(mSize == 0){//初始状态，强制pos为0
+            mPos=0;
+        }else{//在pos位置插入数据，pos右边的所有数据右移一格。
+            int tailPos=mSize-1;
+            while(tailPos>=mPos){
+                mNodes[tailPos+1]= mNodes[tailPos];
+                tailPos--;
+            }
+        }
+        mNodes[mPos]=new Node(mData);
+        mSize++;
+    }
+
+    public int getSize(){
+        return mSize;
+    }
+
+    public int getCapacity(){
+        return mNodes.length;
+    }

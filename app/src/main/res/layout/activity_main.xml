@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="#ffffff"
+        >
+
+        <ListView
+            android:id="@+id/lv_code2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:choiceMode="singleChoice"
+            android:divider="@null">
+
+        </ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_arguments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:digits="12345, 67890"
+                android:hint="pos, data"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_height"
+                android:background="@drawable/btn_frame"
+                android:onClick="doOk"
+                android:text="执行"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <com.ycxy.datastruct.view.DrawView
+            android:id="@+id/draw_view"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/btn_first"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_height"
+                android:layout_weight="1"
+                android:background="@drawable/btn_frame"
+                android:onClick="doFirst"
+                android:text="起始"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btn_previous"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_height"
+                android:layout_weight="1"
+                android:background="@drawable/btn_frame"
+                android:layout_marginLeft="4dp"
+                android:onClick="doPrevious"
+                android:text="上一步"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btn_play"
+                android:layout_width="0dp"
+                android:layout_marginLeft="4dp"
+                android:layout_height="@dimen/btn_height"
+                android:layout_weight="1"
+                android:background="@drawable/btn_frame"
+                android:onClick="doPlay"
+                android:text="暂停"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/btn_frame"
+                android:textSize="10sp"
+                android:layout_weight="1"
+                android:onClick="doNext"
+                android:text="下一步"
+                />
+
+            <Button
+                android:id="@+id/btn_last"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_height"
+                android:layout_weight="1"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/btn_frame"
+                android:onClick="doLast"
+                android:text="结尾"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="变量值:"
+            />
+        <TextView
+            android:id="@+id/tv_vars"
+            android:layout_width="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_height="100dp" />
+
+    </LinearLayout>
+
+</ScrollView>

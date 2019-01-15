@@ -1,0 +1,27 @@
+package com.ycxy.datastruct.algorithm;
+
+import com.ycxy.datastruct.R;
+import com.ycxy.datastruct.Tools;
+import com.ycxy.datastruct.state.BinaryTreeState;
+import com.ycxy.datastruct.state.StateManager;
+
+public class BinaryTree extends Algorithm{
+    private BTNode mRoot=null;//二叉树根
+    private int mSize=0;//二叉树结点个数
+    private int mData;//临时存储要插入的数据
+
+    public void go() {
+        mRoot=insert(mRoot,mData);
+    }
+
+    BTNode insert(BTNode node, int data){
+        if(node==null){
+            mSize++;
+            return new BTNode(data);
+        }else if(node.great(data)){
+            node.mLeft=insert(node.mLeft,data);
+        }else if(node.less(data)){
+            node.mRight=insert(node.mRight,data);
+        }
+        return node;
+    }

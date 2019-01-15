@@ -1,0 +1,5 @@
+顺序表的前插操作:<br/>
+将顺序表L中的第i个元素之前插入一个新的数据元素b，顺序表的长度变成原来的length+1<br/>
+如:<br/>
+顺序表数据为<font color='red' size='20'>[d,c,e]</font>。在第二个为之前插入m，则c、e后移，将m插入顺序表.
+插入后顺序表为<font color='red' size='20'>[d,m,c,e]</font>
