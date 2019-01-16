@@ -4,7 +4,7 @@
 
 运用安卓绘图，根据算法的设计思路达到相对应的演示效果。可以对整个动态显示过程进行 **起始、上一步、播放、暂停、下一步、结尾** 操作。
 
-![show](https://github.com/comeCU/myGitHubImages/raw/master/imgs_Algorithm-state-show/show.gif)
+<div align="center"> <img src="https://github.com/comeCU/myGitHubImages/blog/master/imgs_Algorithm-state-show/show.gif"/> </div>
 
 
 
